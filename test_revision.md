@@ -27,5 +27,5 @@ out = 0.0
 **(f) Trace the program simulate() with the arrays given above and show the output of NEURON[3].**
 
 
-### Test result
+### Test result 
 
