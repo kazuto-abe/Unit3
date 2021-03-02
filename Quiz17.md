@@ -39,5 +39,4 @@ print(evaluation.evenlySpaced(a = 4,b = 6,c = 3))
 
 ### test result
 
-![Screen Shot 2021-03-02 at 20 19 15](https://user-images.githubusercontent.com/60457723/109641058-9c255280-7b94-11eb-88c8-0473510eff65.png)
-
+![Screen Shot 2021-03-02 at 21 09 16](https://user-images.githubusercontent.com/60457723/109646468-92ebb400-7b9b-11eb-8c09-8bfa2e6ad6c8.png)
