@@ -8,27 +8,33 @@ evenlySpaced(4, 6, 3) → false <br>
 
 ### python code
 ```.py
-def evenlySpaced(a,b,c):
-    unsorted_nums = [a,b,c]
-    sorted_nums = []
-    length = len(unsorted_nums)
-    
-    for i in range (length):
-        max = unsorted_nums[-1]
-        for i in unsorted_nums:
-            if i > max:
-                max = i
-        sorted_nums.append(max)
-        unsorted_nums.remove(max)
-    
-    if abs(sorted_nums[0] - sorted_nums[1]) == abs(sorted_nums[1] - sorted_nums[2]):
-        return True
-    else:
-        return False
+class evaluation():
+    def __init__(self, a, b, c):
+        self.a:int = a
+        self.b:int = b
+        self.c:int = c
 
-print(evenlySpaced(2,4,6))
-print(evenlySpaced(4,6,2))
-print(evenlySpaced(4,6,3))
+    def evenlySpaced(a,b,c):
+        unsorted_nums = [a,b,c]
+        sorted_nums = []
+        length = len(unsorted_nums)
+    
+        for i in range (length):
+            max = unsorted_nums[-1]
+            for i in unsorted_nums:
+                if i > max:
+                    max = i
+            sorted_nums.append(max)
+            unsorted_nums.remove(max)
+    
+        if abs(sorted_nums[0] - sorted_nums[1]) == abs(sorted_nums[1] - sorted_nums[2]):
+            return True
+        else:
+            return False
+
+print(evaluation.evenlySpaced(a = 2,b = 4,c = 6))
+print(evaluation.evenlySpaced(a = 4,b = 6,c = 2))
+print(evaluation.evenlySpaced(a = 4,b = 6,c = 3))
 ```
 
 ### test result
