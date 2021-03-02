@@ -32,3 +32,6 @@ print(evenlySpaced(4,6,3))
 ```
 
 ### test result
+
+![Screen Shot 2021-03-02 at 20 19 15](https://user-images.githubusercontent.com/60457723/109641058-9c255280-7b94-11eb-88c8-0473510eff65.png)
+
