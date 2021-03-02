@@ -37,3 +37,4 @@ print(convert(x = "101!010!100"))
 ```
 
 ### test result
+![Screen Shot 2021-03-02 at 22 36 50](https://user-images.githubusercontent.com/60457723/109656505-d6e4b600-7ba7-11eb-9743-f91fc2c6d8f9.png)
