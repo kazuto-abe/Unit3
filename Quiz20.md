@@ -1,5 +1,7 @@
 # Quiz20
 
+For each pair of characters of an input String, swap the two characters.
+
 ### python code
 ```.py
 class Swap():
