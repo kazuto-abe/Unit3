@@ -6,19 +6,29 @@ evenlySpaced(2, 4, 6) → true <br>
 evenlySpaced(4, 6, 2) → true <br>
 evenlySpaced(4, 6, 3) → false <br>
 
-[HL] Using OOP in your solution.
+### python code
+```.py
+def evenlySpaced(a,b,c):
+    unsorted_nums = [a,b,c]
+    sorted_nums = []
+    length = len(unsorted_nums)
+    
+    for i in range (length):
+        max = unsorted_nums[-1]
+        for i in unsorted_nums:
+            if i > max:
+                max = i
+        sorted_nums.append(max)
+        unsorted_nums.remove(max)
+    
+    if abs(sorted_nums[0] - sorted_nums[1]) == abs(sorted_nums[1] - sorted_nums[2]):
+        return True
+    else:
+        return False
 
-### Pseudocode1
+print(evenlySpaced(2,4,6))
+print(evenlySpaced(4,6,2))
+print(evenlySpaced(4,6,3))
+```
 
-### Python code1
-
-### Test result1
-
-
-
-### Pseudocode2
-
-### Python code2
-
-### Test result2
-
+### test result
