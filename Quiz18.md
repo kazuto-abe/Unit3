@@ -34,3 +34,6 @@ print(Step.find_steps(n = "39"))
 ```
 ### test result 
 
+![Screen Shot 2021-03-02 at 21 41 33](https://user-images.githubusercontent.com/60457723/109650086-18716300-7ba0-11eb-8d51-8c60bb428120.png)
+
+
