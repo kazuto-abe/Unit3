@@ -10,9 +10,27 @@ Example: N = 39 <br>
 Since it took us 3 steps to reach a number with only 1 digit, the output is 3. 
 
 ### python code
-
-
-
-
+```.py
+class Step():
+    def __init__(self, n):
+        self.n:str = n
+        
+    def find_steps(n):
+        step = 0
+        length = len(n)
+        
+        while length > 1:
+            product = 1
+            for i in range(length):
+                product *= int(n[i])
+            
+            n = str(product)
+            step += 1
+            
+        return step
+        
+    
+print(Step.find_steps(n = "39"))
+```
 ### test result 
 
