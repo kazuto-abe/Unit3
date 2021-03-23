@@ -2,12 +2,12 @@
 
 Table of Contents:
 
-  1. [Planning (Criteria A)]
-  2. [Design (Criteria B)]
-  3. [Development (Criteria C)]
-  4. [Functionality (Criteria D)]
-  5. [Evaluation (Criteria E)]
-  6. [Citation ]
+  1. [Planning (Criteria A)](https://github.com/kazuto-abe/Unit3/blob/main/Oranchi_delivery.md#criteria-a--planning)
+  2. [Design (Criteria B)](https://github.com/kazuto-abe/Unit3/blob/main/Oranchi_delivery.md#criateria-b--design)
+  3. [Development (Criteria C)](https://github.com/kazuto-abe/Unit3/blob/main/Oranchi_delivery.md#criteria-c--development)
+  4. [Functionality (Criteria D)](https://github.com/kazuto-abe/Unit3/blob/main/Oranchi_delivery.md#criteria-d--functionality)
+  5. [Evaluation (Criteria E)](https://github.com/kazuto-abe/Unit3/blob/main/Oranchi_delivery.md#criteria-e--evaluation)
+  6. [Citation ](https://github.com/kazuto-abe/Unit3/blob/main/Oranchi_delivery.md#citation)
   
 ## Criteria A : Planning
 
