@@ -2,7 +2,7 @@
 
 Table of Contents:
 
-  1. Planning (Criteria A)
+  1. [Planning (Criteria A)]
   2. Design (Criteria B)
   3. Development (Criteria C)
   4. Functionality (Criteria D)
