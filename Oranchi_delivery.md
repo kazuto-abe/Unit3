@@ -53,11 +53,17 @@ All coding development and documentation are supporsed to be done by April 1st, 
 
 ### Sketches of the idea
 
+![166703775_203841577745291_2552787042388067845_n](https://user-images.githubusercontent.com/60457723/112995506-41d4dd00-91a6-11eb-8c5a-8c5bb5febb04.jpg)
+
 ### System diagram
 
 ## UML diagram
 
+![Screen Shot 2021-03-30 at 21 45 27](https://user-images.githubusercontent.com/60457723/112990690-4b0f7b00-91a1-11eb-8578-c38fe71539dd.png)
+
 ### ER diagram
+
+![Screen Shot 2021-03-30 at 21 56 28](https://user-images.githubusercontent.com/60457723/112992071-cf163280-91a2-11eb-89d7-c788976f3c07.png)
 
 ### Normalized table
 
