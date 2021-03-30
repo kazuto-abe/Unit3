@@ -53,6 +53,7 @@ All coding development and documentation are supporsed to be done by April 1st, 
 
 ### Sketches of the idea
 
+![CamScanner 03-30-2021 22 24_1](https://user-images.githubusercontent.com/60457723/112996353-10a8dc80-91a7-11eb-9873-b9befb24bb4b.jpg)
 
 ### System diagram
 
