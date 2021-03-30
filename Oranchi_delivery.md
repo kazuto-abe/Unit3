@@ -22,9 +22,12 @@ Table of Contents:
 
 Technical Feasiblity - Is the project techincally possible?
 
+As mentioned previously, this product is simply created by python which works on any sort of environment like computer so I would say techinal requirements are not high. 
+
 Economical Feasiblity - Can the project be afforded? Will it increase profit?
 
-Since
+Since all expencses through the app develoment are fully covered by UWC ISAK Japan, this project is feasible finanicially.
+Futher, all process are done by our own computer with Pycharm so all essential item are prepared in advance.
 
 Legal Feasiblity - Is the project legal?
 
@@ -40,10 +43,10 @@ All coding development and documentation are supporsed to be done by April 1st, 
 
 ### Success criteria
 
-1. The product contains login/sign up page one's username, email and its password.
+1. The product contains login/sign up page which includes one's username, email and its password.
 2. The product contains at least two database which are linking each other.
-3. All order information are stored in the DB table.
-4. 
+3. The program has neither bugs nor technical issues and executes correctly.
+4. Total price will be automatically calculated and shown on user's digital receipt.
 
 
 ## Criateria B : Design
