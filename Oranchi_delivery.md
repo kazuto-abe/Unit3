@@ -20,24 +20,24 @@ Table of Contents:
 
 ### TELOS study (feasibility report)
 
-Technical Feasiblity - Is the project techincally possible?
+**Technical Feasiblity** - Is the project techincally possible?
 
 As mentioned previously, this product is simply created by python which works on any sort of environment like computer so I would say techinal requirements are not high. 
 
-Economical Feasiblity - Can the project be afforded? Will it increase profit?
+**Economical Feasiblity** - Can the project be afforded? Will it increase profit?
 
 Since all expencses through the app develoment are fully covered by UWC ISAK Japan, this project is feasible finanicially.
 Futher, all process are done by our own computer with Pycharm so all essential item are prepared in advance.
 
-Legal Feasiblity - Is the project legal?
+**Legal Feasiblity** - Is the project legal?
 
 This product is completly done in a legal way, so it indeed won't be problematic in the future. Moreover, this project should not be copy-righted since it will not be established for third-parties whom are outside of the school .
 
-Operational Feasiblity - How will the current operation support the change?
+**Operational Feasiblity** - How will the current operation support the change?
 
 As I mentioned, this product is mainly designed by python and kivy so that we, all developers and testers, readily maintain or modify our program on our own. Also the program is coded on computer but will be displayed on a phone for customers.
 
-Schedule Feasiblity - Can the project be done in time?
+**Schedule Feasiblity** - Can the project be done in time?
 
 All coding development and documentation are supporsed to be done by April 1st, which is pretty feasible since we are given approximately 3 weeks in order to polish evething from the beginning.
 
@@ -54,6 +54,8 @@ All coding development and documentation are supporsed to be done by April 1st, 
 ### Sketches of the idea
 
 ### System diagram
+
+## UML diagram
 
 ### ER diagram
 
