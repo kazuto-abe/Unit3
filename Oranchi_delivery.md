@@ -56,6 +56,9 @@ Figure 1: A rough skech of the application platform which simplifies each compon
 ## Criateria B : Design
 ### System diagram
 
+![systemdiagram_unit3 001](https://user-images.githubusercontent.com/60457723/113005679-a6486a00-91af-11eb-8f38-5f646730a376.jpeg)
+Figure 2: A system diagram shows the flow of the program. All inputs are entered by users, and execute them using python and database and finally output some details on a digital receipt. This is done by UI interface designed by Kivy.
+
 ### UML diagram
 
 ![Screen Shot 2021-03-30 at 21 45 27](https://user-images.githubusercontent.com/60457723/112990690-4b0f7b00-91a1-11eb-8578-c38fe71539dd.png)
