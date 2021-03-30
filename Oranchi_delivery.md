@@ -48,22 +48,23 @@ All coding development and documentation are supporsed to be done by April 1st, 
 3. The program has neither bugs nor technical issues and executes correctly.
 4. Total price will be automatically calculated and shown on user's digital receipt.
 
-
-## Criateria B : Design
-
 ### Sketches of the idea
 
 ![CamScanner 03-30-2021 22 24_1](https://user-images.githubusercontent.com/60457723/112996353-10a8dc80-91a7-11eb-9873-b9befb24bb4b.jpg)
+Figure 1: A rough skech of the application platform which simplifies each components; login/register page, order page and bill page that shows user's receipt which includes total price of meals.
 
+## Criateria B : Design
 ### System diagram
 
-## UML diagram
+### UML diagram
 
 ![Screen Shot 2021-03-30 at 21 45 27](https://user-images.githubusercontent.com/60457723/112990690-4b0f7b00-91a1-11eb-8578-c38fe71539dd.png)
+Figure 3: A UML diagram that shows the relationship between User table and Order_input table, and each table contains variables with the particular data type (string or integer). Also it shows a couple of function names indicate what to execute throughout the program.
 
 ### ER diagram
 
 ![Screen Shot 2021-03-30 at 21 56 28](https://user-images.githubusercontent.com/60457723/112992071-cf163280-91a2-11eb-89d7-c788976f3c07.png)
+Figure 4: A ER diagram shows that each entities has several properties, which closely links to another table. In addition, it indicates primary key (id) and foreing key (user_id) that correspond to the user input which is stored in the database.
 
 ### Normalized table
 
