@@ -53,7 +53,6 @@ All coding development and documentation are supporsed to be done by April 1st, 
 
 ### Sketches of the idea
 
-![166703775_203841577745291_2552787042388067845_n](https://user-images.githubusercontent.com/60457723/112995506-41d4dd00-91a6-11eb-8c5a-8c5bb5febb04.jpg)
 
 ### System diagram
 
