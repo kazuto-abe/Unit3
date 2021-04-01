@@ -43,10 +43,9 @@ All coding development and documentation are supporsed to be done by April 1st, 
 
 ### Success criteria
 
-1. The product contains login/sign up page which includes one's username, email and its password.
-2. The product contains at least two database which are linking each other.
-3. The program has neither bugs nor technical issues and executes correctly.
-4. Total price will be automatically calculated and shown on user's digital receipt.
+1. The product contains login/sign up page.
+2. All user/order information are safely stored.
+3. Total price will be automatically calculated and shown on user's digital receipt.
 
 ### Sketches of the idea
 
