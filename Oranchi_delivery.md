@@ -60,8 +60,8 @@ Figure 2: A system diagram shows the flow of the program. All inputs are entered
 
 ### UML diagram
 
-![Screen Shot 2021-03-30 at 21 45 27](https://user-images.githubusercontent.com/60457723/112990690-4b0f7b00-91a1-11eb-8578-c38fe71539dd.png)
-Figure 3: A UML diagram that shows the relationship between User table and Order_input table, and each table contains variables with the particular data type (string or integer). Also it shows a couple of function names indicate what to execute throughout the program.
+![Screen Shot 2021-03-30 at 21 45 27](https://user-images.githubusercontent.com/60457723/112990690-4b0f7b00-91a1-11eb-8578-c38fe71539dd.png)<br>
+Figure 3: A UML diagram that shows the relationship between User table and Order_input table, and each table contains variables with the particular data type (string or integer). Also it shows a couple of function names indicate what to execute throughout the program. 
 
 ### ER diagram
 
@@ -546,11 +546,39 @@ ScreenManager:
                         root.parent.current = "LoginScreen"
 ```
 
+#### The code for the two database, which are excuted on the console
+```.sql
+create table my_Order(
+    id integer primary key autoincrement not null,
+    my_menu    varchar(50),
+    quantity    integer varchar(3),
+    address     varchar(50),
+    phone   varchar(15),
+    user_id integer,
+    foreign key (user_id) references User(id)
+);
+
+create table User(
+    id integer primary key autoincrement not null,
+    username varchar (30),
+    email varchar (30),
+    password varchar (20),
+    registered_at TIMESTAMP DEFAULT (datetime(CURRENT_TIMESTAMP,'localtime'))
+);
+```
+
+![Screen Shot 2021-04-05 at 22 51 08](https://user-images.githubusercontent.com/60457723/113581134-b1910f00-9661-11eb-8dbe-f9da6ef7b97f.png)<br>
+Figure5: ble database for users.
+
+
+![Screen Shot 2021-04-05 at 22 51 01](https://user-images.githubusercontent.com/60457723/113581176-c1a8ee80-9661-11eb-825b-e5202f76d726.png)<br>
+Figure6: able database for order information, which link to the user table (it connects by the foreign key called user_id).
+
 
 ## Criteria D : Functionality
 
 Below is my functionality video↓
-
+Video will be uploaded soon!
 
 ## Criteria E : Evaluation
 
