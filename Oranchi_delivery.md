@@ -582,7 +582,12 @@ Video will be uploaded soon!
 
 ## Criteria E : Evaluation
 
-### Alpha testing
+- Alpha testing (run the program and evaluate by myself based on the success criterias. This mainly includes unit testing.)
+- Beta testing (let third-party execute code by following the procedures, and determine if the criterias are all met or not)
+- User feedback (get objective feedback throughout the testing process that potentially helps to brush up the app more.)
+- Recommendation and further improvements (based on both alpha testing and beta testing, it spots the minor fixes and major fixes)
+
+### Alpha testing (Including Unit testing)
 
 |          Testing<br>phase          |                  Testing<br>section                  |                                  Success criteria                                 |                                                                                                                                                                                                              Procedure                                                                                                                                                                                                             | met?:  |
 |:----------------------------------:|:----------------------------------------------------:|:---------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------:|
@@ -604,12 +609,58 @@ Video will be uploaded soon!
 | Software check                     | Final check                                          |                                                                                   | All the success criteria are being met.                                                                                                                                                                                                                                                                                                                                                                                            | Yes    |
 |                                    |                                                      |                                                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                    |        |
 
+
+Table1: a table shows alpha testing with the sucess criterias that contains unit testing, code review, integration check and software check.
+
 ### Beta testing
 
-### Limitation
-
-### Further improvements
 
 
+Table2: a table shows beta testing with the sample user-inputs.
+
+
+
+<img width="791" alt="Screen Shot 2021-04-06 at 1 58 33" src="https://user-images.githubusercontent.com/60457723/113601486-5d475880-967c-11eb-9728-821904240492.png">
+Figure7: A register screen with the sample inputs (sample, sample, sample, sample)
+
+<img width="790" alt="Screen Shot 2021-04-06 at 1 58 54" src="https://user-images.githubusercontent.com/60457723/113601595-836cf880-967c-11eb-8e07-c2eff452202a.png">
+Figure8: A login screen with the sample inputs (sample, sample)
+
+<img width="798" alt="Screen Shot 2021-04-06 at 2 00 22" src="https://user-images.githubusercontent.com/60457723/113601640-8f58ba80-967c-11eb-9b89-c59e9fcc92c2.png">
+Figure9: A order screen with the sample inputs (sashimi, 2, karuizawa, 00000000000)
+
+<img width="791" alt="Screen Shot 2021-04-06 at 2 00 35" src="https://user-images.githubusercontent.com/60457723/113601673-98e22280-967c-11eb-89ca-908390f95708.png">
+Figure 10: A bill screen
+
+### User feedback
+
+  "This app has abosolutely met my needs because it allows me to immidiately order dishes in 2mins by simply loggin into my personal acccount, which is increadibly conbinient for me! This for sure reduces opportunity to physically go up/down the steap hill to go there, and to find Japanese speakers for booking. Though the platform is pretty user-friendly, there is a couple of limitations such as fixed expected date, visibility of the error message/warning and so on. But I really appreciate your wholesome contribution! Keep it up!" <br>
+=== from the interview with Caleb, who is my customer. 2020/4/3
+
+### Reccomendation and further improvements for the future
+#### Major fixes
+* Make expected delivery date works properly
+=> This ought to be generated as random numbers (ex..create randomly numbers from 50 - 120, step5 ... etc)
+
+* Improve the inputs on the menu screen
+=> So far, every single users has to manually type a name of quisine which indeed makes them frastrated. Plus, they tend to make typo.
+It, therefore, requires pull down menu so that users can easily select what they want by clicking it once.
+
+* Intorduce visible message bar
+=> All error statements/warnings had better be shown on each screen rather than python terminal since users are not allowed to directly see them.
+In order to address this issue, I would like to make a message bar at the bottom of the page that encourages them to recognize the inappropriate inputs.
+This should be instantly popping out.
+
+* Allow users to enter more than two differnt dishes
+=> If you can put only one dish at once, perhaps you may feel unconfortble because you need to order several times, which is not healthy.
+
+* All user password should be encrypted
+=> Since all developers need to keep user's password confidential, this should be prioritzed. This will be done by using hash technology.
+
+#### Minor fixes
+* Email a receipt to user
+=> It could remind them the price and delivery date by sending email so they do not have to login every single times.
+
+* Email condition (it should contain "@", ".", etc...)
 
 ## Citation
