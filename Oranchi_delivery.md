@@ -73,6 +73,7 @@ Figure 4: A ER diagram shows that each entities has several properties, which cl
 
 #### Main.py (python file)
 ```.py
+#import all python modules and libraries at the beggining
 from kivymd.app import MDApp
 from kivymd.uix.label import MDLabel
 from kivy.uix.behaviors import ButtonBehavior
@@ -81,12 +82,17 @@ import sqlite3
 import hashlib, binascii, os
 
 
-
+# class for the homescreen
 class HomeScreen(MDScreen):
+    #this function will instantly be running once user entered into the homescreen
     def on_enter(self, *args):
+        # it shows welcome message with one's username
         self.ids.welcome_msg.text = f"Welcome to the order page, {LoginScreen.current_user_username} !"
 
+    #this function will be excuted when user pushed the "order" button
     def try_order(self):
+        #each properties are named here
+        #all properties come from the user input
         menu = self.ids.menu_input.text
         quantity = self.ids.quantity_input.text
         address = self.ids.address_input.text
@@ -96,19 +102,25 @@ class HomeScreen(MDScreen):
         if not current_user:
             # this happens if current user is None
             return "error"
+        #connect to the database
         conn = sqlite3.connect('user.db')
         cur = conn.cursor()
+        # return the error message if a user puts wrong name
         if not (menu == "karaage" or menu == "sashimi" or menu == "tenpura" or menu == "curry"):
             print("please put the name correctly")
 
         else:
+            # insert all user inputs into the user table
             sql_order = f"insert into my_Order (my_menu, quantity, address, phone, user_id) values ('{menu}', '{quantity}', '{address}', '{phone}', '{current_user}');"
             cur.execute(sql_order)
+            # execute sql
             conn.commit()
             conn.close()
+            #precondition of the total price of menu inputs
             sum_price = 0
 
             if menu == "karaage":
+                #this calculates the individual price with taxes
                 karaage_price = 900 * int(quantity) * 1.08
                 sum_price += karaage_price
                 print(karaage_price)
@@ -132,19 +144,19 @@ class HomeScreen(MDScreen):
 
 
 
-
+# class for the register screen
 class RegisterScreen(MDScreen):
-
 
 
     def try_register(self):
         username = self.ids.username_input.text
         email = self.ids.email_input.text
         psw = self.ids.password_input.text
+        # it requires them to enter passwords again
         psw_check = self.ids.password_check.text
 
         print(psw_check)
-
+        # if password does not match with the previous input, it shows a message
         if psw != psw_check:
             print("passwords do not match")
         else:
@@ -153,7 +165,7 @@ class RegisterScreen(MDScreen):
             cur = conn.cursor()
             cur.execute(sql)
             result = cur.fetchone()
-
+            # it shows a message if an email is already created
             if result:
                 print("Email is already exist/")
             else:
@@ -180,6 +192,7 @@ class RegisterScreen(MDScreen):
 class ButtonLabel(ButtonBehavior, MDLabel):
     pass
 
+# class for the login screen
 class LoginScreen(MDScreen):
     current_user = None
     #current_user = {'id':1, 'name': "test", email:"example"}
@@ -194,7 +207,7 @@ class LoginScreen(MDScreen):
                                       100000)
         pwdhash = binascii.hexlify(pwdhash).decode('ascii')
         return pwdhash == stored_password
-
+    # this will be done when user pushed the login button. This corresponds to main.kv;
     def try_login(self):
         email = self.ids.email_input.text
         psw = self.ids.password_input.text
@@ -211,15 +224,20 @@ class LoginScreen(MDScreen):
         if result:
             id, username, password, email, registered_at = result
             print(f"login successful for user with id {id}")
+            # it redirects to the home screen once user information are varified.
             self.parent.current = "HomeScreen"
             LoginScreen.current_user = id
             LoginScreen.current_user_username = username
 
             return result
         else:
+            # show a message if user is not created yet
             print("User does not exist")
 
+#class for the bill screen
 class BillScreen(MDScreen):
+    # once a page is redirected from order page, user will see the total price of meal.
+    # this changes according to user's menu inputs
     def on_enter(self, *args):
         self.ids.total_price.text = f"Total price (including tax):  {HomeScreen.sum_price} !"
 
@@ -231,29 +249,31 @@ class MainApp(MDApp):
 
 
 MainApp().run()
+
 ```
 
 #### Main.kv (kivy file)
 ```.py
 ScreenManager:
     id: scr_manager
-
+    #Here is to manage all screens with their names. Program will be excuted in order.
     LoginScreen:
         name: "LoginScreen"
     RegisterScreen:
         name: "RegisterScreen"
     HomeScreen:
         name: "HomeScreen"
-
     BillScreen:
         name:"BillScreen"
 
-
+# This is a screen for the user receipt
 <BillScreen>:
+    # size of the entire screen
     BoxLayout:
         orientation: 'vertical'
         size: root.height, root.width
 
+    # set the background image
     FitImage:
         source: "izakaya.jpeg"
 
@@ -261,6 +281,7 @@ ScreenManager:
         size_hint: 0.8, 0.8
         elevation: 10
         pos_hint: {"center_x":.5, "center_y": 0.5}
+        #determine whether a card is vertical or horizontal
         orientation: "vertical"
 
         BoxLayout:
@@ -268,6 +289,7 @@ ScreenManager:
             size_hint: 0.8, 0.5
             pos_hint: {"center_x": 0.5}
 
+            #this is just for the line which visualizes the box layout
             #canvas.before:
                 #Color:
                     #rgba: .5, .5, .5, 1
@@ -280,6 +302,7 @@ ScreenManager:
                 font_style: "H4"
                 halign: "center"
             MDLabel:
+                # each id connects to the main.py
                 id: total_price
                 #text: "Total price (including tax): "
                 font_style: "H6"
@@ -295,7 +318,7 @@ ScreenManager:
 
 
 
-
+#this is a screen for the register
 <RegisterScreen>:
     BoxLayout:
         orientation: 'vertical'
@@ -309,6 +332,8 @@ ScreenManager:
         elevation: 10
         pos_hint: {"center_x":.5, "center_y": 0.5}
         orientation: "vertical"
+        # by particulaly setting rgb color, the background color of MDCard changes to what I want it to be.
+        # last parameter, 0.6, is to change its opacity
         md_bg_color:[255/255, 255/255, 255/255, 0.6]
 
 
@@ -322,6 +347,7 @@ ScreenManager:
                 font_style: "H6"
                 halign: "center"
 
+            #user input, type: text
             MDTextField:
                 id: username_input
                 hint_text: "Username"
@@ -344,6 +370,7 @@ ScreenManager:
                 icon_right: "eye-off"
                 helper_text: "Invalid password"
                 helper_text_mode: "on_error"
+                #make this section mandatory
                 required: True
                 password: True
 
@@ -360,6 +387,7 @@ ScreenManager:
             MDRaisedButton:
                 text: "Register"
                 on_release:
+                    #it executes try_register and goes to login screen at the same time once the button is pushed
                     root.try_register()
                     root.parent.current = "LoginScreen"
 
@@ -516,76 +544,6 @@ ScreenManager:
                     on_press:
                         print("here")
                         root.parent.current = "LoginScreen"
-
-
-
-
-
-
-
-
-
-<LoginScreen>:
-    BoxLayout:
-        orientation: 'vertical'
-        size: root.height, root.width
-
-    FitImage:
-        source: "izakaya.jpeg"
-
-    MDCard:
-        size_hint: 0.4, 0.6
-        elevation: 10
-        pos_hint: {"center_x":.5, "center_y": 0.5}
-        orientation: "vertical"
-        md_bg_color:[255/255, 255/255, 255/255, 0.6]
-
-        MDBoxLayout:
-            id: content #id or name
-            adaptive_height: True
-            orientation: "vertical"
-            padding: dp(15)
-            spacing: dp(10)
-
-            MDLabel:
-                text: "Login"
-                font_style: "H3"
-                halign: "center"
-
-
-            MDTextField:
-                id: email_input
-                hint_text: "Email"
-                icon_left: "email"
-                helper_text: "Invalid email"
-                helper_text_mode: "on_error"
-                required: True
-
-            MDTextField:
-                id: password_input
-                hint_text: "Password"
-                icon_right: "eye-off"
-                helper_text: "Invalid password"
-                helper_text_mode: "on_error"
-                required: True
-                password: True
-
-            MDRaisedButton:
-                text: "Log in"
-                on_release:
-                    root.try_login()
-
-            MDBoxLayout:
-                adaptive_height: True
-
-                ButtonLabel:
-                    text: "Register"
-                    halign: "right"
-                    on_press:
-                        print("here")
-                        root.parent.current = "RegisterScreen"
-
-
 ```
 
 
